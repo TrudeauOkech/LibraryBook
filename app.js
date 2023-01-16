@@ -55,6 +55,7 @@ app.post("/", (req, res) => {
 	})
 })
 
+// Book borowed
 app.post('/issue', (req, res) => {
 	var requestedBookTitle = req.body.bookTitle;
 	books.forEach(book => {
@@ -67,6 +68,7 @@ app.post('/issue', (req, res) => {
 	})
 })
 
+// Book Returned
 app.post('/return', (req, res) => {
 	var requestedBookTitle = req.body.bookTitle;
 	books.forEach(book => {
@@ -79,6 +81,7 @@ app.post('/return', (req, res) => {
 	})
 })
 
+// Delete a book
 app.post('/delete', (req, res) => {
 	var requestedBookTitle = req.body.bookTitle;
 	var j = 0;
